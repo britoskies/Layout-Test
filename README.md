@@ -8,7 +8,6 @@ In the project directory, you can run:
 
 ``` 
 npm run dev
-
 ```
 
 Runs the app in the development mode.\
@@ -19,7 +18,6 @@ You may also see any lint errors in the console.
 
 ``` 
 npm test 
-
 ```
 
 Launches the test runner in the interactive watch mode.\
@@ -27,7 +25,6 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 ``` 
 npm run build 
-
 ```
 
 Builds the app for production to the `build` folder.\
