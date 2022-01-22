@@ -1,0 +1,239 @@
+@import "./global";
+
+.middle-card {
+  border-radius: $paper_radius;
+  box-shadow: $paper_shadow;
+  font-size: 1.6rem;
+
+  .hr-top {
+    border: none;
+    height: 0.3rem;
+    background-color: #f5f5f8;
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 8rem;
+      height: 100%;
+      background-color: #ee3828;
+      position: absolute;
+    }
+  }
+
+  .tooltip {
+    display: inline-block;
+    position: relative;
+    text-align: left;
+    .info {
+      margin: 0 0 .8rem 0;
+      font-weight: bold;
+    }
+    .tooltip-desc {
+      color: $gray;
+    }
+  }
+
+  .tooltip .left {
+    min-width: 200px;
+    top: 50%;
+    right: 100%;
+    padding: 1.6rem;
+    transform: translate(0, -50%);
+    color: #ffffff;
+    background-color: #222222;
+    font-weight: normal;
+    font-size: 13px;
+    position: absolute;
+    z-index: 99999999;
+    box-sizing: border-box;
+    display: none;
+  }
+
+  .tooltip:hover .left {
+    display: block;
+  }
+
+  .tooltip .left i {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-top: -12px;
+    width: 12px;
+    height: 24px;
+    overflow: hidden;
+  }
+
+  .tooltip .left i::after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    left: 0;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    background-color: #000000;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+  }
+
+  @include responsive(computer) {
+    width: $computer_width;
+    padding: 12px 24px 24px 24px;
+    background-color: #fff;
+    margin-bottom: 1.2rem;
+
+    .slider-menu {
+      display: flex;
+      margin: 1.2rem 0 1.1rem 0;
+      gap: 3.6rem;
+      .slider-menu-opcion--active {
+        margin: 0 1rem 0 1rem;
+        font-weight: bold;
+      }
+      .slider-menu-opcion {
+        margin: 0 1rem 0 1rem;
+      }
+    }
+
+    .middle-card-description {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 3.2rem 0 0 0;
+      flex-wrap: wrap;
+      .title {
+        margin: 0 0 0 1.6rem;
+        width: 47%;
+      }
+      .btn-container {
+        display: flex;
+        width: 48%;
+        margin: 0 1.6rem 0 0;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+      }
+
+      .bottom-section {
+        display: flex;
+        width: 100%;
+        margin: 1.6rem 0 0 0;
+        padding: 2rem;
+        background-color: $green_shadow;
+        justify-content: space-between;
+        border-radius: $paper_radius;
+        .bottom-section-left {
+          display: flex;
+          gap: 3.2rem;
+          .bottom-section-desc {
+            flex-wrap: wrap;
+            .libre {
+              color: $gray;
+              margin-bottom: 0.8rem;
+            }
+            .consumido {
+              color: $gray;
+              margin-bottom: 0.8rem;
+            }
+          }
+        }
+
+        .bottom-section-icons {
+          display: flex;
+          gap: 0.8rem;
+          justify-content: center;
+          align-items: center;
+          svg {
+            width: 3.6rem;
+            background-color: $icon_shadow;
+            padding: 1rem;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+
+  @include responsive(phone) {
+    width: $phone_width;
+    padding: 12px 24px 0 24px;
+    background-color: #fff;
+
+    .slider-menu {
+      display: flex;
+      margin: 1.2rem 0 1.1rem 0;
+      gap: 3.6rem;
+      .slider-menu-opcion--active {
+        margin: 0 1rem 0 1rem;
+        font-weight: bold;
+      }
+      .slider-menu-opcion {
+        margin: 0 1rem 0 1rem;
+      }
+    }
+
+    .middle-card-description {
+      display: flex;
+      margin: 3.2rem 0 0 0;
+      flex-wrap: wrap;
+      .title {
+        margin: 0.8rem 0 0.8rem 0;
+        width: 100%;
+      }
+      .btn-container {
+        width: 100%;
+        margin: 3.2rem 0 3.2rem 0;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        order: 4;
+        button {
+          width: 100%;
+          padding: 0.8rem 0 0.8rem 0;
+        }
+      }
+
+      .bottom-section {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 1.6rem 0 0 0;
+        padding: 2rem 2rem 0 2rem;
+        background-color: $green_shadow;
+        justify-content: space-between;
+        border-radius: $paper_radius;
+        .bottom-section-left {
+          display: flex;
+          flex-direction: column;
+          margin: 1.6rem 0 1.6rem 0;
+          gap: 3.2rem;
+          .bottom-section-desc {
+            display: flex;
+            justify-content: space-between;
+            .libre {
+              color: $gray;
+              margin-bottom: 0.8rem;
+            }
+            .consumido {
+              color: $gray;
+              margin-bottom: 0.8rem;
+            }
+          }
+        }
+
+        .bottom-section-icons {
+          display: flex;
+          flex-direction: row;
+          margin: 1.6rem 0 1.6rem 0;
+          gap: 0.8rem;
+          justify-content: center;
+          align-items: center;
+          svg {
+            width: 3.6rem;
+            background-color: $icon_shadow;
+            padding: 1rem;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+}

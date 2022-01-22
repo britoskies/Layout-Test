@@ -1,0 +1,36 @@
+$gray: #868687;
+$phone_shadow: #f5f5f8;
+$icon_shadow: #e9f4f6;
+$button_shadow: #fdebe9;
+$green_shadow: #f9fafc;
+$paper_shadow: 0 3px 3px 3px #f1f1f4;
+$paper_radius: 0.8rem;
+$phone_width: 32rem;
+$computer_width: 70rem;
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	font-size: .6rem;
+	font-family: 'Franklin Medium', 'Arial Narrow', Arial, sans-serif;
+	background-color: #f5f5f8;
+}
+@mixin responsive($size) {
+	$screen_sizes: (
+		phone: "(max-width: 670px)",
+		tablet: "(max-width: 1024px)",
+		computer: "(max-width: 1600px)",
+	);
+
+	$query_value: map-get($screen_sizes, $size);
+
+	@media #{$query_value} {
+		@content;
+	}
+}

@@ -1,0 +1,17 @@
+$btn_bg: #fdebe9;
+$primary_color: #ee3828;
+
+.primary, .secondary {
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem 1.5rem;
+}
+
+.primary {
+    background-color: $primary_color;
+    color: #fff;
+}
+.secondary {
+    background-color: $btn_bg;
+    color: $primary_color;
+}

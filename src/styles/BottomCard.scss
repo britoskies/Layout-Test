@@ -1,0 +1,194 @@
+@import "./global";
+
+.bottom-card {
+  border-radius: $paper_radius;
+  box-shadow: $paper_shadow;
+  font-size: 1.6rem;
+
+  hr {
+    border: none;
+    height: 0.3rem;
+    background-color: #f5f5f8;
+    position: relative;
+  }
+
+  @include responsive(computer) {
+    width: $computer_width;
+    padding: 12px 24px 24px 24px;
+    background-color: #fff;
+
+    .balances {
+      margin: 1.2rem 0 1.1rem 1.6rem;
+      font-weight: bold;
+    }
+
+    .middle-section {
+      display: flex;
+      margin: 3.2rem 0 0 0;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      .title {
+        margin: 0 0 0 1.6rem;
+        width: 47%;
+      }
+      .all-btn-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.4rem;
+        margin-right: 1.6rem;
+        .btn-container {
+          display: flex;
+          justify-content: flex-end;
+          flex-wrap: wrap;
+          button {
+            width: 9em;
+          }
+        }
+      }
+    }
+
+    .bottom-section {
+      display: flex;
+      width: 100%;
+      margin: 1.6rem 0 0 0;
+      padding: 2rem;
+      background-color: $green_shadow;
+      justify-content: space-between;
+      border-radius: $paper_radius;
+      .bottom-section-left {
+        display: flex;
+        gap: 3.2rem;
+        .bottom-section-desc {
+          .recarga {
+            color: $gray;
+            margin-bottom: 0.8rem;
+          }
+          .pasatiempo {
+            color: $gray;
+            margin-bottom: 0.8rem;
+          }
+          .balance-prom {
+            color: $gray;
+            margin-bottom: 0.8rem;
+          }
+          .bono {
+            color: $gray;
+            margin-bottom: 0.8rem;
+          }
+        }
+      }
+
+      .bottom-section-icons {
+        display: flex;
+        gap: 0.8rem;
+        justify-content: center;
+        align-items: center;
+        svg {
+          width: 3.6rem;
+          background-color: $icon_shadow;
+          padding: 1rem;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+
+
+  @include responsive(phone) {
+    width: $phone_width;
+    padding: 12px 24px 0 24px;
+    background-color: #fff;
+
+    .balances {
+      margin: 1.2rem 0 1.1rem 1.6rem;
+      font-weight: bold;
+    }
+
+    .middle-section {
+      display: flex;
+      margin: 3.2rem 0 0 0;
+      flex-wrap: wrap;
+      .title {
+        margin: 0.8rem 0 0.8rem 0;
+        width: 100%;
+      }
+      .all-btn-container {
+        display: flex;
+        width: 100%;
+        margin: 3.2rem 0;
+        gap: 3.2rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        order: 4;
+        .btn-container {
+          display: flex;
+          width: 100%;
+          margin: 0;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+          button {
+            width: 100%;
+            padding: 0.8rem 0 0.8rem 0;
+          }
+        }
+      }
+    }
+
+    .bottom-section {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin: 1.6rem 0 0 0;
+      padding: 2rem 2rem 0 2rem;
+      background-color: $green_shadow;
+      justify-content: space-between;
+      border-radius: $paper_radius;
+      .bottom-section-left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 1.6rem 0 1.6rem 0;
+        gap: 3.2rem;
+        .bottom-section-desc {
+          display: flex;
+          justify-content: space-between;
+          .recarga {
+            color: $gray;
+            margin-bottom: 0.8rem;
+          }
+          .pasatiempo {
+            color: $gray;
+            margin-bottom: 0.8rem;
+          }
+          .balance-prom {
+            color: $gray;
+            margin-bottom: 0.8rem;
+          }
+          .bono {
+            color: $gray;
+            margin-bottom: 0.8rem;
+          }
+        }
+      }
+      .bottom-section-icons {
+        display: flex;
+        flex-direction: row;
+        margin: 1.6rem 0 1.6rem 0;
+        gap: 0.8rem;
+        justify-content: center;
+        align-items: center;
+        svg {
+          width: 3.6rem;
+          background-color: $icon_shadow;
+          padding: 1rem;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
