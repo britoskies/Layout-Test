@@ -2,6 +2,10 @@
 
 This project was made for an interview test at CLARO DOMINICANA.
 
+## Layout
+
+![layout](./src//assets/images/complete_layout.png)
+
 ## Available Scripts
 
 In the project directory, you can run:
